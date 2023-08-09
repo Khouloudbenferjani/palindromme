@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Exercice</title>
+    <style>
+        h1 {
+            color: brown;
+        }
+
+        .italique {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: space-around">
+        <div>
+            <div>
+                <h1 id="title">conteur</h1>
+            </div>
+            <div>
+                <input id="conteur" type="text" value='0'>
+            </div>
+
+            <div>
+                <button id="plus">+</button><button id="moins">-</button>
+            </div>
+        </div>
+
+    </div>
+    <script>
+
+        let plus = document.getElementById("plus");
+        let moins = document.getElementById("moins");
+        let conteur = document.getElementById("conteur");
+        conteur.value = parseInt(conteur.value);
+        plus.addEventListener("click", function () {
+
+
+            conteur.value++;
+
+        }
+        )
+        moins.addEventListener("click", function () {
+
+            conteur.value--;
+
+        }
+        );
+
+    </script>
+</body>
+
+</html>
